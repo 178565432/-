@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Vue1026.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="text" v-model="name"/>
+			<form action="#">
+				<input type="text" id="username" v-model="user.uname"/>
+				<input type="password" id="pwd" v-model="user.upwd"/>
+				<input type='button' v-on:click="submit" value="注册" />
+			</form>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				name: '你好！',
+				user:{uname:"",upwd:""}
+			},
+			methods:{
+				submit:function(){
+					alert(this.user.uname+" pwd="+this.user.upwd);
+				}
+			}
+		});
+	</script>
+
+</html>

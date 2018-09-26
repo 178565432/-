@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<div id="app">
+			<span v-text="name"></span>
+			<div v-html="name"></div>
+		</div>
+	</body>
+	<script src="js/Vue1026.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				name: '<h1>你好！</h1>'
+			}
+		});
+	</script>
+
+</html>

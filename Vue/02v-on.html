@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Vue1026.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{ name }}
+			<button v-on:click="change">改变name值</button>
+		</div>
+	</body>
+	<script>
+	var vm = new Vue({
+		el:'#app',
+		data:{
+			name:'你好！'
+		},
+		methods:{
+			change:function(){
+				this.name+='1';	
+			}
+		}
+	});
+	</script>
+</html>
