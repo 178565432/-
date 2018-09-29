@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Vue221.js"></script>
+		<style>
+			.show-enter-active,.show-leave-active{
+				transition:all 0.4s ease;
+				padding: 10px;
+			}
+			.show-enter,.show-leave-active{
+				padding: 100px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<button @click="toggle">显示和隐藏</button><br />
+			<transition name='show'>
+			<span v-show="isshow">{{msg}}</span>
+			</transition>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data:{
+				isshow:false,
+				msg:'你好！'
+			},
+			methods:{
+				toggle:function(){
+					this.isshow=!this.isshow;
+				}
+			}
+		});
+	</script>
+
+</html>
