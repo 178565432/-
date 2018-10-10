@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Vue1026.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			{{ name+'1' }} 
+			{{ name=='你好！'?'true':'false'}} 
+			{{ if1(name)}}
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				name: '你好！'
+			},
+			methods: {
+				if1: function(string) {
+					return string == '你好！'
+				}
+			}
+		});
+	</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Vue1026.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			{{time}}<br />
+			{{time|datefmt}}
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				time: new Date()
+			},
+			filters:{
+				datefmt:function(input){
+					var res='';
+					var year=input.getFullYear();
+					var month=input.getMonth()+1;
+					var day=input.getDate();
+					res=year+'-'+month+'-'+day;
+					return res;
+				}
+			}
+		});
+	</script>
+
+</html>
